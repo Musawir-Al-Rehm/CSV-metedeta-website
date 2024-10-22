@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Interface</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- FontAwesome CDN for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-k6RqeWeci5ZR/Lv4MR0sA0FfDOM22p3zCjNW3G3Zdy5WdaTx4hgG7yJIQX9XXf" crossorigin="anonymous">
+</head>
+<body class="bg-gradient-to-b from-blue-300 via-purple-500 to-blue-500 h-screen flex justify-center items-center">
+
+  <div class="bg-gray-900 p-8 rounded-lg shadow-lg w-96">
+    <h2 class="text-2xl font-bold text-white mb-6 text-center">Login</h2>
+    
+    <form id="loginForm">
+      <div class="mb-4">
+        <label for="email" class="block text-white text-sm font-bold mb-2">Email Address</label>
+        <div class="relative">
+          <!-- Google icon next to the email input -->
+          <span class="absolute inset-y-0 left-0 flex items-center pl-3">
+            <i class="fab fa-google text-gray-400"></i>
+          </span>
+          <input type="email" id="email" name="email" class="w-full pl-10 pr-4 py-2 text-blue-900 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500" placeholder="Enter your email" required>
+        </div>
+      </div>
+      
+      <div class="mb-6 relative">
+        <label for="password" class="block text-white text-sm font-bold mb-2">Password</label>
+        <input type="password" id="password" name="password" class="w-full px-10 py-2 text-gray-900 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500" placeholder="Enter your password" required>
+        
+      </div>
+      
+      <div class="flex items-center justify-between">
+        <button type="submit" class="bg-indigo-600 hover:bg-indigo-500 text-white font-bold py-2 px-4 rounded-lg w-full">
+          Login
+        </button>
+      </div>
+    </form>
+    
+    <div class="mt-6 text-center">
+      <a href="#" class="text-indigo-400 hover:text-indigo-300 text-sm">Forgot Password?</a>
+    </div>
+  </div>
+
+  <!-- JavaScript for login functionality -->
+  <script>
+    // Get the form element
+    const loginForm = document.getElementById('loginForm');
+
+    // Add a submit event listener to handle the form submission
+    loginForm.addEventListener('submit', function(event) {
+      event.preventDefault();  // Prevent the form from submitting the default way
+
+      // Get the values entered in the email and password fields
+      const email = document.getElementById('email').value;
+      const password = document.getElementById('password').value;
+
+      // For demonstration, you can log the email and password to the console
+      console.log('Email:', email);
+      console.log('Password:', password);
+
+      // Example: Basic validation
+      if (email && password) {
+        // Redirect to homepage (index.html)
+        window.location.href = "index.html";  // Redirect to your homepage
+      } else {
+        alert("Please enter both email and password.");
+      }
+    });
+
+    
+  </script>
+
+</body>
+</html>

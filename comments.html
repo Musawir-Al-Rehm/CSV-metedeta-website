@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recent Tasks</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Acme&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@500&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <style>
+        /* Add this CSS to ensure the sidebar stays fixed */
+        .sidebar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 100vh; /* Full height */
+        }
+        .content {
+            margin-left: 16rem; /* Adjust to match your sidebar width (64) */
+        }
+
+        /* Custom transition duration for the feedback button */
+        .feedback-button {
+            transition: all 5s; /* Apply transition for all properties over 5 seconds */
+        }
+    </style>
+</head>
+
+
+        
+</div><body class="bg-gray-100">
+    <div class="flex">
+        <!-- Sidebar -->
+        <div class="sidebar h-screen bg-gradient-to-b from-gray-100 to-pink-100 text-gray-100 w-64 flex-shrink-0">
+            <div class="p-4">
+                <h1 class="text-2xl font-bold mb-5 bg-gradient-to-r from-blue-300 to-purple-700 bg-clip-text text-transparent" style="font-family: 'Acme', sans-serif;">Website Name</h1>
+
+
+
+                <nav>
+                    <ul>
+                        <li class="mb-4">
+                            <a href="csv.html" id="csvButton" class="flex items-center p-3 text-lg text-gray-900 hover:bg-gradient-to-r from-blue-200 via-blue-500 to-purple-400 hover:duration-500 rounded-md hover:rounded-full transition-colors duration-100 hover:text-white">
+                                <i class="fa-solid fa-file ml-2"></i>
+                                <span class="ml-3" style="font-family: 'Montserrat', sans-serif;">Create CSV</span>
+                            </a>
+                        </li>
+                        <li class="mb-4">
+                            <a href="task.html" class="flex items-center p-3 text-lg text-gray-900 hover:bg-gradient-to-r from-blue-200 via-blue-500 to-purple-400 hover:duration-500 rounded-md hover:rounded-full transition-colors duration-100 hover:text-white">
+                                <i class="fa-solid fa-check ml-2"></i>
+                                <span class="ml-3" style="font-family: 'Montserrat', sans-serif;">Recent Tasks</span>
+                            </a>
+                        </li>
+                        <li class="mb-4">
+                            <a href="credits.html" class="flex items-center p-3 text-lg text-gray-900 hover:bg-gradient-to-r from-blue-200 via-blue-500 to-purple-400 hover:duration-500 rounded-md hover:rounded-full transition-colors duration-100 hover:text-white">
+                                <i class="fa-solid fa-circle-plus ml-2"></i>
+                                <span class="ml-3" style="font-family: 'Montserrat', sans-serif;">Buy Credits</span>
+                            </a>
+                        </li>
+                        <li class="mb-4">
+                            <a href="tutorials.html" class="flex items-center p-3 text-lg text-gray-900 hover:bg-gradient-to-r from-blue-200 via-blue-500 to-purple-400 hover:duration-500 rounded-md hover:rounded-full transition-colors duration-100 hover:text-white">
+                                <i class="fa-solid fa-file-video ml-2"></i>
+                                <span class="ml-3" style="font-family: 'Montserrat', sans-serif;">Tutorials</span>
+                            </a>
+                        </li>
+                        <li class="mb-4">
+                            <a href="setting.html" class="flex items-center p-3 text-lg text-gray-900 hover:bg-gradient-to-r from-blue-200 via-blue-500 to-purple-400 hover:duration-500 rounded-md hover:rounded-full transition-colors duration-100 hover:text-white">
+                                <i class="fas fa-cog ml-2"></i>
+                                <span class="ml-3" style="font-family: 'Montserrat', sans-serif;">Settings</span>
+                            </a>
+                        </li>
+                        <li class="mb-4">
+                            <a href="logout.html" class="flex items-center p-3 text-lg text-gray-900 hover:bg-gradient-to-r from-blue-200 via-blue-500 to-purple-400 hover:duration-500 rounded-md hover:rounded-full transition-colors duration-100 hover:text-white">
+                                <i class="fa-solid fa-right-from-bracket ml-2"></i>
+                                <span class="ml-3" style="font-family: 'Montserrat', sans-serif;">Log Out</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+                
+            </div>
+
+           <!-- Buy Now Button -->
+           <div class="absolute bottom-12 left-1/2 transform -translate-x-1/2 bg-white bg-opacity-75 p-6 rounded-2xl shadow-lg w-60 h-64 flex flex-col items-center justify-center">
+            <span class="text-3xl font-bold mb-4 bg-gradient-to-r from-blue-300 to-purple-400 bg-clip-text text-transparent">
+                Wants More!
+            </span>
+            <a href="credits.html">
+                <button class="flex items-center justify-center bg-gradient-to-r from-blue-300 via-blue-500 to-purple-400 text-white rounded-full px-6 py-3 transition duration-500 ease-in-out hover:from-blue-300 hover:to-purple-400 hover:bg-gradient-to-r">
+                    <i class="fas fa-plus mr-2"></i> Buy Now
+                </button>
+            </a>
+            <span class="text-gray-400 text-sm">Click on the button</span>
+        </div>
+                </div>
+<div class="content flex-grow p-8">
+    <!-- Welcome Message -->
+    <div class="text-lg mb-8 text-gray-500 ">
+        <p class="leading-normal">Thank you for visiting our website! We are truly grateful for your presence here. Your feedback and suggestions mean the world to us. We believe that every comment you leave helps us grow and improve, and we can't wait to hear your thoughts!</p>
+        <p class="mt-4 leading-normal">Your insights are invaluable, and we appreciate you taking the time to share them. We hope you find our content useful and inspiring. We're looking forward to seeing you again soon!</p>
+    </div>
+    <!-- Comments Heading -->
+    <h1 class="text-5xl font-medium bg-gradient-to-r from-blue-300 to-purple-700 bg-clip-text text-transparent" style="font-family: 'Kanit', sans-serif;">We Love to hear from you!</h1>
+
+
+    <!-- Comment Box Section -->
+<div class="bg-gradient-to-r from-blue-300 to-purple-500 p-6 rounded-lg shadow-md mt-8">
+    <h2 class="text-xl font-semibold text-white">Leave Your Comments</h2>
+    <textarea id="commentBox" rows="5" class="mt-2 w-full p-2 bg-white border-2 border-purple-300 rounded focus:outline-none focus:ring focus:ring-gray-300 resize-none" placeholder="Write your comments here..." maxlength="1500" oninput="updateCharacterCount()"></textarea>
+    <div class="mt-2 text-gray-300" id="charCount">0 / 1500</div>
+</div>
+
+<!-- Send Button -->
+<div class="mt-4 text-right">
+    <button class="bg-blue-500 text-white py-2 px-4 rounded-lg shadow-md transition-colors duration-300 hover:bg-gradient-to-r hover:from-blue-300 hover:to-purple-400">
+        Send
+    </button>
+</div>
+
+<script>
+    function updateCharacterCount() {
+        const commentBox = document.getElementById('commentBox');
+        const charCount = document.getElementById('charCount');
+        const currentLength = commentBox.value.length;
+        charCount.textContent = `${currentLength} / 1500`;
+
+        // If the character limit is reached, stop additional input
+        if (currentLength >= 1500) {
+            commentBox.value = commentBox.value.substring(0, 1500);
+        }
+    }
+</script>

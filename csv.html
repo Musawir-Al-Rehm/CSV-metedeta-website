@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generate CSV</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Acme&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@500&display=swap" rel="stylesheet">
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <style>
+        .sidebar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 100vh;
+        }
+        .content {
+            margin-left: 16rem;
+        }
+        .feedback-button {
+            transition: all 0.5s;
+        }
+        
+    </style>
+</head>
+
+<body class="bg-gray-100">
+    <div class="flex">
+        <!-- Sidebar -->
+        <div class="sidebar h-screen bg-gradient-to-b from-gray-100 to-pink-100 text-gray-100 w-64 flex-shrink-0">
+            <div class="p-4">
+                <h1 class="text-2xl font-bold mb-5 bg-gradient-to-r from-blue-300 to-purple-700 bg-clip-text text-transparent" style="font-family: 'Acme', sans-serif;">Website Name</h1>
+
+
+
+                <nav>
+                    <ul>
+                        <li class="mb-4">
+                            <a href="csv.html" id="csvButton" class="flex items-center p-3 text-lg text-gray-900 hover:bg-gradient-to-r from-blue-200 via-blue-500 to-purple-400 hover:duration-500 rounded-md hover:rounded-full transition-colors duration-100 hover:text-white">
+                                <i class="fa-solid fa-file ml-2"></i>
+                                <span class="ml-3" style="font-family: 'Montserrat', sans-serif;">Create CSV</span>
+                            </a>
+                        </li>
+                        <li class="mb-4">
+                            <a href="task.html" class="flex items-center p-3 text-lg text-gray-900 hover:bg-gradient-to-r from-blue-200 via-blue-500 to-purple-400 hover:duration-500 rounded-md hover:rounded-full transition-colors duration-100 hover:text-white">
+                                <i class="fa-solid fa-check ml-2"></i>
+                                <span class="ml-3" style="font-family: 'Montserrat', sans-serif;">Recent Tasks</span>
+                            </a>
+                        </li>
+                        <li class="mb-4">
+                            <a href="credits.html" class="flex items-center p-3 text-lg text-gray-900 hover:bg-gradient-to-r from-blue-200 via-blue-500 to-purple-400 hover:duration-500 rounded-md hover:rounded-full transition-colors duration-100 hover:text-white">
+                                <i class="fa-solid fa-circle-plus ml-2"></i>
+                                <span class="ml-3" style="font-family: 'Montserrat', sans-serif;">Buy Credits</span>
+                            </a>
+                        </li>
+                        <li class="mb-4">
+                            <a href="tutorials.html" class="flex items-center p-3 text-lg text-gray-900 hover:bg-gradient-to-r from-blue-200 via-blue-500 to-purple-400 hover:duration-500 rounded-md hover:rounded-full transition-colors duration-100 hover:text-white">
+                                <i class="fa-solid fa-file-video ml-2"></i>
+                                <span class="ml-3" style="font-family: 'Montserrat', sans-serif;">Tutorials</span>
+                            </a>
+                        </li>
+                        <li class="mb-4">
+                            <a href="setting.html" class="flex items-center p-3 text-lg text-gray-900 hover:bg-gradient-to-r from-blue-200 via-blue-500 to-purple-400 hover:duration-500 rounded-md hover:rounded-full transition-colors duration-100 hover:text-white">
+                                <i class="fas fa-cog ml-2"></i>
+                                <span class="ml-3" style="font-family: 'Montserrat', sans-serif;">Settings</span>
+                            </a>
+                        </li>
+                        <li class="mb-4">
+                            <a href="logout.html" class="flex items-center p-3 text-lg text-gray-900 hover:bg-gradient-to-r from-blue-200 via-blue-500 to-purple-400 hover:duration-500 rounded-md hover:rounded-full transition-colors duration-100 hover:text-white">
+                                <i class="fa-solid fa-right-from-bracket ml-2"></i>
+                                <span class="ml-3" style="font-family: 'Montserrat', sans-serif;">Log Out</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+                
+            </div>
+
+           <!-- Buy Now Button -->
+<div class="absolute bottom-12 left-1/2 transform -translate-x-1/2 bg-white bg-opacity-75 p-6 rounded-2xl shadow-lg w-60 h-64 flex flex-col items-center justify-center">
+    <span class="text-3xl font-bold mb-4 bg-gradient-to-r from-blue-300 to-purple-400 bg-clip-text text-transparent">
+        Wants More!
+    </span>
+    <a href="credits.html">
+        <button class="flex items-center justify-center bg-gradient-to-r from-blue-300 via-blue-500 to-purple-400 text-white rounded-full px-6 py-3 transition duration-500 ease-in-out hover:from-blue-300 hover:to-purple-400 hover:bg-gradient-to-r">
+            <i class="fas fa-plus mr-2"></i> Buy Now
+        </button>
+    </a>
+    <span class="text-gray-400 text-sm">Click on the button</span>
+</div>
+        </div>
+        <!-- Main Content Area -->
+        <div class="content flex-grow p-8">
+            <h1 class="text-7xl font-medium bg-gradient-to-r from-blue-300 to-purple-700 bg-clip-text text-transparent" style="font-family: 'Kanit', sans-serif;">Generate CSV</h1>
+
+            <p class="mt-4 text-lg" style="opacity: 0.5;">Choose a Generator to get started!!</p>
+            
+
+            <!-- this is for the boxes-->
+            <!-- File Boxes Section -->
+            <div class="grid grid-cols-5 gap-8 mt-8">
+                <!-- Adobe Stock Box -->
+                <a href="generate.html" class="bg-gray-100 rounded-lg p-6 shadow-lg transition-transform duration-500 ease-in-out hover:bg-gradient-to-r from-blue-300 via-blue-500 to-purple-500 hover:scale-105">
+                    <img src="images/1.png" alt="Adobe Stock" class="mx-auto mb-4 w-16 h-16" />
+                    <span class="block text-center font-bold" style="font-family: 'Montserrat', sans-serif;">AdobeStock</span>
+                </a>
+
+                <!-- Shutterstock Box -->
+                <a href="generate.html" class="bg-gray-100 rounded-lg p-6 shadow-lg transition-transform duration-500 ease-in-out hover:bg-gradient-to-r from-blue-300 via-blue-500 to-purple-500 hover:scale-105">
+                    <img src="images/2bg.png" alt="Shutterstock" class="mx-auto mb-4 w-16 h-16" />
+                    <span class="block text-center font-bold" style="font-family: 'Montserrat', sans-serif;">Shutterstock</span>
+                </a>
+
+                <!-- Freepik Box -->
+                <a href="generate.html" class="bg-gray-100 rounded-lg p-6 shadow-lg transition-transform duration-500 ease-in-out hover:bg-gradient-to-r from-blue-300 via-blue-500 to-purple-500 hover:scale-105">
+                    <img src="images/3bg.png" alt="Freepik" class="mx-auto mb-4 w-16 h-16" />
+                    <span class="block text-center font-bold" style="font-family: 'Montserrat', sans-serif;">Freepik</span>
+                </a>
+
+                <!-- Coming Soon Box 1 -->
+                <div class="bg-gray-300 rounded-lg p-6 shadow-lg cursor-not-allowed">
+                    <div class="text-center">
+                        <span class="block text-2xl font-bold text-gray-500">Coming Soon</span>
+                    </div>
+                </div>
+
+                <!-- Coming Soon Box 2 -->
+                <div class="bg-gray-300 rounded-lg p-6 shadow-lg cursor-not-allowed">
+                    <div class="text-center">
+                        <span class="block text-2xl font-bold text-gray-500">Coming Soon</span>
+                    </div>
+                </div>
+
+                 <!-- Coming Soon Box 3 -->
+                 <div class="bg-gray-300 rounded-lg p-6 shadow-lg cursor-not-allowed">
+                    <div class="text-center">
+                        <span class="block text-2xl font-bold text-gray-500">Coming Soon</span>
+                    </div>
+                </div>
+ <!-- Coming Soon Box 4 -->
+ <div class="bg-gray-300 rounded-lg p-6 shadow-lg cursor-not-allowed">
+    <div class="text-center">
+        <span class="block text-2xl font-bold text-gray-500">Coming Soon</span>
+    </div>
+</div>
+            
+            </div>
+            <!-- the box content ended-->
+
+            <!-- Usage Details Section -->
+            <div class="bg-white p-8 mt-12 shadow-lg rounded-lg">
+                <div class="grid grid-cols-2 gap-8">
+                    <!-- Input fields for Max Number of Characters and Keywords -->
+                    <div>
+                        <label for="titleChars" class="block text-lg font-medium">Max Number of characters in title: (max 200)</label>
+                        <input type="number" id="titleChars" name="titleChars" max="200" class="mt-2 p-2 border rounded w-full" value="50">
+                    </div>
+                    <div>
+                        <label for="keywords" class="block text-lg font-medium">Max number of keywords: (max 50)</label>
+                        <input type="number" id="keywords" name="keywords" max="50" class="mt-2 p-2 border rounded w-full" value="25">
+                    </div>
+                </div>
+
+                <!-- Usage Details -->
+                <div class="mt-8">
+                    <h3 class="text-2xl font-semibold">Usage Details</h3>
+                    <ul class="mt-4 space-y-2">
+                        <li class="flex items-center">
+                            <span class="bg-blue-500 text-white p-2 rounded-full mr-4">🔒</span>
+                            Own API: <span class="ml-auto font-bold">No</span>
+                        </li>
+                        <li class="flex items-center">
+                            <span class="bg-green-500 text-white p-2 rounded-full mr-4">👁️</span>
+                            Vision: <span class="ml-auto font-bold">Disabled</span>
+                        </li>
+                        <li class="flex items-center">
+                            <span class="bg-purple-500 text-white p-2 rounded-full mr-4">💳</span>
+                            Credits: <span class="ml-auto font-bold">5/image</span>
+                        </li>
+                    </ul>
+                    <p class="mt-4 text-gray-500">Without vision, filename will be used to generate metadata.</p>
+                </div>
+            </div>
+
+        </div>
+
+    
+    <!-- Comments Button -->
+<div class="flex items-end justify-center h-screen">
+    <a href="comments.html" id="feedback-button" class="fixed bottom-4 right-4 bg-gradient-to-r from-blue-300 via-blue-500 to-purple-400 text-white flex items-center feedback-button rounded-full p-2 transition duration-500 ease-in-out hover:from-blue-300 hover:to-purple-400 hover:bg-gradient-to-r">
+        <i class="fas fa-comments text-white mr-2"></i>
+        <span class="hidden text-white">Comments</span>
+    </a>
+
+        <script>
+            const feedbackButton = document.getElementById('feedback-button');
+            const feedbackText = feedbackButton.querySelector('span');
+
+            feedbackButton.addEventListener('mouseenter', () => {
+                feedbackButton.classList.remove('rounded-full'); // Remove round corners
+                feedbackButton.classList.add('w-auto', 'h-12', 'rounded-lg'); // Make it rectangular
+                feedbackText.classList.remove('hidden');
+            });
+
+            feedbackButton.addEventListener('mouseleave', () => {
+                feedbackButton.classList.add('rounded-full'); // Return to round corners
+                feedbackButton.classList.remove('w-auto', 'h-12', 'rounded-lg');
+                feedbackText.classList.add('hidden');
+            });
+        </script>
+    </div>
+</body>
+</html>
